@@ -1,2 +1,2 @@
-# Ksiazka
-Tworzenie klasy Ksiazka do Projektu Biblioteka
+# BIBLIOTEKA
+Tworzenie klas do Projektu Biblioteka
