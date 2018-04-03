@@ -1,22 +1,23 @@
-# BIBLIOTEKA
-Tworzenie klasy Ksiazka do Projektu Biblioteka
-
-#include"Ksiazka.h"
 #include<cstring>
-
+#include<cstdlib>
+#include <sstream>
+using namespace std;
 class Recenzja{
 	
 private:
 	string recenzja;
 	int ocena;
 public:
-	Recenzja::Recenzja(string recenzja, int ocena){
-		this.recenzja = recenzja;
-		this.ocena = ocena;
+	Recenzja(string rec, int nota){
+		recenzja = rec;
+		ocena = nota;
 		
 	}
+	Recenzja(){};
 	string pokazRecenzje(){
-		return recenzja +" "+ ocena;
+		stringstream ss;
+		ss<<recenzja <<" "<< ocena;
+		return ss.str();
 	}
 	
 };

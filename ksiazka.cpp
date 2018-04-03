@@ -1,52 +1,59 @@
-
-# Ksiazka
-/*Tworzenie klasy Ksiazka do Projektu Biblioteka*/
-
 #include<cstring>
-
+#include"Recenzja.cpp"
+using namespace std;
 class Ksiazka
 {
 private:
 	string autor;
 	string tytul;
-	int ID;
-	int status;
 	Recenzja recenzja;
+	static int nextID;
+	int ID;
 public:
-Ksiazka::Ksiazka(string autor, string tytul, int ID , int status)
-{
-	this.autor = autor;
-	this.tytul = tytul;
-	this.ID = ID;
-	this.status = status; 
-}
-	
-void zmienStatus(int NowyStatus){
-	this.status = NowyStatus
-}
+	int status;
+	Ksiazka(string autor, string tytul, int status, Recenzja recenzja)
+	{
+		this->autor = autor;
+		this->tytul = tytul;
+		this->ID = nextID;
+		this->status = status;
+		this->recenzja = recenzja;
+		nextID++;
+	}
 
-string pokazAutora(){
-	return autor;
-}
+	void zmienStatus(int NowyStatus)
+	{
+		this->status = NowyStatus;
+	}
 
-string pokazTytul(){
-	return tytul;
-}
+	int pokazID(){
+		return ID;
+	}
+	
+	string pokazAutora()
+	{
+		return autor;
+	}
 
-int pokazStatus(int status){
-	return status;
-} 
+	string pokazTytul()
+	{
+		return tytul;
+	}
 
-string pokazRecenzje(){
-	return recenzja;
-}
-void zrecenzuj(Recenzja recenzja){
-	this.recenzja = recenzja;
-	
-}
-	
-	
+	int pokazStatus()
+	{
+		return status;
+	}
+
+	string pokazRecenzje()
+	{
+		return recenzja.pokazRecenzje();
+	}
+	void zrecenzuj(Recenzja recenzja)
+	{
+		this->recenzja = recenzja;
+
+	}
+
 };
-=======
-
 
