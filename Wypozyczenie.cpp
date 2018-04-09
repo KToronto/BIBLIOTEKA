@@ -1,5 +1,5 @@
-
-/*#include <iostream>
+#include"ListaWypozyczen.cpp"
+#include <iostream>
 
 using namespace std;
 
@@ -9,7 +9,7 @@ private:
     int ID;
 public:
     Wypozyczenie();
-    void przedluz();
+ //   void przedluz();
     int pokazID();
 };
 
@@ -19,11 +19,10 @@ Wypozyczenie::Wypozyczenie(int ID) {
     this->ID=ID;
 }
 
-void Wypozyczenie::przedluz() {
+//void Wypozyczenie::przedluz() {
 
-}
+//}
 
 void Wypozyczenie::pokazID() {
-
+    cout<<this.ID<<endl;
 }
-*/
