@@ -1,4 +1,4 @@
-/*#include <string>
+#include <string>
 using namespace std;
 
 class Rezerwacja {
@@ -31,4 +31,4 @@ int Rezerwacja::pokazID() {
 }
 
 
-*/
+
