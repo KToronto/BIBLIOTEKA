@@ -14,6 +14,7 @@
 	<CompilerType Value="CPP"/>
 	<AppType Value="CONSOLE"/>
 	<Files>
+		<File Name="Konsola.cpp"/>
 		<File Name="Rezerwacja.cpp"/>
 		<File Name="Wypozyczenie.cpp"/>
 		<File Name="ListaWypozyczen.cpp"/>
@@ -22,6 +23,5 @@
 		<File Name="Ksiazka.cpp"/>
 		<File Name="KatalogKsiazek.cpp"/>
 		<File Name="Recenzja.cpp"/>
-		<File Name="NewFile.cpp"/>
 	</Files>
 </Project>
