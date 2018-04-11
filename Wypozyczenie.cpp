@@ -1,5 +1,5 @@
-#include"ListaWypozyczen.cpp"
 #include <iostream>
+#include "Data.cpp"
 
 using namespace std;
 
@@ -8,21 +8,22 @@ class Wypozyczenie{
 private:
     int ID;
 public:
-    Wypozyczenie();
- //   void przedluz();
-    int pokazID();
+    Wypozyczenie(){
+
+        this->ID=ID;
+    };
+    void przedluz(Data data){
+
+        int nowyDzien, nowyMiesiac, nowyRok;
+        data.dzien=nowyDzien;
+        data.miesiac=nowyMiesiac;
+        data.rok=nowyRok;
+
+        return data;
+
+    };
+    int pokazID(){
+
+        return ID;
+    };
 };
-
-//Konstruktor
-
-Wypozyczenie::Wypozyczenie(int ID) {
-    this->ID=ID;
-}
-
-//void Wypozyczenie::przedluz() {
-
-//}
-
-void Wypozyczenie::pokazID() {
-    cout<<this.ID<<endl;
-}
