@@ -1,34 +1,34 @@
 #include <string>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 class Rezerwacja {
 private:
-	int status;
-	int ID;
+    int status;
+    int ID;
 
 public:
-	Rezerwacja(int ID);
-	void zmienStatus(int nowyStatus);
-	//int pokazStatus();
-	int pokazID();
+    int status, nowyStatus;
+    Rezerwacja(int ID){
+        this->ID = ID;
+        this->status = 0;
+    };
+    void zmienStatus(int nowyStatus){
+
+        this->status = nowyStatus;
+    };
+    int pokazStatus(){
+
+        return this->status;
+    };
+    int pokazID(){
+
+        return this->ID;
+    };
+    int dodajID(){
+
+        srand( time( NULL ) );
+        int ID=(rand() % 500)+101;
+    };
 };
-
-Rezerwacja::Rezerwacja(int ID) { // Konstruktor
-	status = 0;
-	this->ID = ID;
-}
-
-void Rezerwacja::zmienStatus(int nowyStatus) {
-	this->status = nowyStatus;
-}
-
-//int Rezerwacja::pokazStatus() {
-//	return this->status;
-//}
-
-int Rezerwacja::pokazID() {
-	return this->ID;
-}
-
-
-
